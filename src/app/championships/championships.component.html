@@ -1,0 +1,28 @@
+<h2>Championships</h2>
+<ul class="championships">
+
+<div class="grid-container">
+
+  <div class="grid-child purple">
+    <ul class="championships">
+      <li *ngFor="let seasonResult of championshipDisplayList">
+
+        <button [class.selected]="seasonsList" type="button" (click)="onSelect(seasonResult)">
+          <span class="name">{{seasonResult}}</span>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="grid-child green">
+    <ul class="championships">
+      <li *ngFor="let winner of winnerDisplayList">
+        <span class="name">{{winner}}</span>
+      </li>
+
+
+    </ul>
+  </div>
+
+</div>
